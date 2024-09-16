@@ -126,7 +126,24 @@ p {
     margin: 20px 0;
   }
 }
+/* Profile Section */
+.profile {
+  padding: 3rem 0;
+  text-align: center;
+}
 
+.profile-photo {
+  border-radius: 50%;
+  border: 5px solid #ffeb3b;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+}
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -292,5 +309,71 @@ p {
 
   .nav-links.active {
     display: block;
+  }
+}
+.download-cv {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ffeb3b;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.download-cv:hover {
+  background-color: #ffd54f;
+}
+
+/* Education Section */
+.education {
+  padding: 3rem 0;
+  background-color: #111;
+}
+
+.education .container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.education-item {
+  background-color: #000;
+  border: 2px solid #ffeb3b;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-item h3 {
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
+
+.education-item p {
+  color: #fff;
+}
+
+.education-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.education-item i {
+  font-size: 2rem;
+  color: #ffeb3b;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 2rem 0;
+  }
+
+  .education .container {
+    grid-template-columns: 1fr;
   }
 }
